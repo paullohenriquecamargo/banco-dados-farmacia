@@ -55,9 +55,9 @@ namespace Repositorio
                 Remedio remedio = new Remedio();
                 remedio.Id = Convert.ToInt32(linha["id"]);
                 remedio.Nome = linha["nome"].ToString();
-                remedio.Generico = Convert.ToBoolean(linha["generico"]);
+                remedio.Generico = Convert.ToBoolean(linha["eh_generico"]);
                 remedio.Categoria = linha["categoria"].ToString();
-                remedio.Solido = Convert.ToBoolean(linha["solido"]);
+                remedio.Solido = Convert.ToBoolean(linha["eh_solido"]);
                 remedio.ContraIndicacoes = linha["contra_indicacoes"].ToString();
                 remedio.Bula = linha["bula"].ToString();
                 remedio.Faixa = linha["faixa"].ToString();
@@ -71,7 +71,39 @@ namespace Repositorio
             // Retorna a lista de filmes 
             return remedios;
         }
+        public Remedio ObterPeloId(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiadeConexao;
+            conexao.Open();
 
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"SELECT * FROM remedios WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("@ID", id);
+
+            DataTable dataTable = new DataTable();
+            dataTable.Load(comando.ExecuteReader());
+            conexao.Close();
+            if (dataTable.Rows.Count == 1)
+            {
+                DataRow linha = dataTable.Rows[0];
+                Remedio remedio = new Remedio();
+                remedio.Id = Convert.ToInt32(linha["id"]);
+                remedio.Nome = linha["nome"].ToString();
+                remedio.Generico = Convert.ToBoolean(linha["eh_generico"]);
+                remedio.Categoria = linha["categoria"].ToString();
+                remedio.Solido = Convert.ToBoolean(linha["eh_solido"]);
+                remedio.ContraIndicacoes = linha["contra_indicacoes"].ToString();
+                remedio.Bula = linha["bula"].ToString();
+                remedio.Faixa = linha["faixa"].ToString();
+                remedio.PrecisaReceita = Convert.ToBoolean(linha["precisa_receita"]);
+
+                return remedio;
+            }
+            return null;
+        }
 
     }
 }

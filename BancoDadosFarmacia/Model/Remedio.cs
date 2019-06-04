@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Class1
+    public class Remedio
     {
+        public int Id;
+        public bool Generico;
+        public string Nome;
+        public string Categoria;
+        public bool Solido;
+        public string ContraIndicacoes;
+        public string Bula;
+        public string Faixa;
+        public bool PrecisaReceita;
     }
 }
