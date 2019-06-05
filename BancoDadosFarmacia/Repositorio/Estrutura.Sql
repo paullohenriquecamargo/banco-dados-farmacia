@@ -11,9 +11,11 @@ CREATE TABLE remedios (
 	precisa_receita BIT
 );
 
-INSERT INTO remedios (nome)
+INSERT INTO remedios (nome, eh_generico, categoria, eh_solido, contra_indicacoes, bula, faixa, precisa_receita )
     VALUES 
-('clonazepam');
+('clonazepam',1 ,'antinflamatorio', 0, 'dengue', 'amarelo', 'preta', 0);
 
-SELECT nome FROM remedios;
+DELETE FROM remedios WHERE precisa_receita = 0;
+
+SELECT * FROM remedios;
 	

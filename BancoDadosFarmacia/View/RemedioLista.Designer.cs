@@ -119,6 +119,7 @@
             this.Controls.Add(this.btnApagar);
             this.Name = "RemedioLista";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.RemedioLista_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

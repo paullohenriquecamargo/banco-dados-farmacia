@@ -28,6 +28,8 @@ namespace View
             remedio.Solido = rbSolido.Checked;
             remedio.PrecisaReceita = rbSim.Checked;
             remedio.Faixa = txtFaixa.Text;
+            remedio.Bula = txtBula.Text;
+            remedio.ContraIndicacoes = txtContraIndicacoes.Text;
 
             RemedioRepositorio repositorio = new RemedioRepositorio();
             repositorio.Inserir(remedio);

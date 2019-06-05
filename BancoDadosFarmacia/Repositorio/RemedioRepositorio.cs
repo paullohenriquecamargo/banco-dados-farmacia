@@ -71,6 +71,7 @@ namespace Repositorio
             // Retorna a lista de filmes 
             return remedios;
         }
+
         public Remedio ObterPeloId(int id)
         {
             SqlConnection conexao = new SqlConnection();
@@ -104,6 +105,7 @@ namespace Repositorio
             }
             return null;
         }
+
         public void Inserir(Remedio remedio)
         {
             SqlConnection conexao = new SqlConnection();
@@ -112,7 +114,8 @@ namespace Repositorio
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "INSERT INTO remedios (nome, eh_generico, categoria, eh_solido, contra_indicacoes, bula, faixa, precisa_receita) VALUES (@NOME, @EH_GENERICO, @CATEGORIA, @EH_SOLIDO, @CONTRA_INDICACOES, @BULA, @FAIXA, @PRECISA_RECEITA";
+            comando.CommandText = "INSERT INTO remedios (nome, eh_generico, categoria, eh_solido, contra_indicacoes, bula, faixa, precisa_receita)" +
+                " VALUES (@NOME, @EH_GENERICO, @CATEGORIA, @EH_SOLIDO, @CONTRA_INDICACOES, @BULA, @FAIXA, @PRECISA_RECEITA)";
 
             comando.Parameters.AddWithValue("@NOME", remedio.Nome);
             comando.Parameters.AddWithValue("@EH_GENERICO", remedio.Generico);
@@ -127,6 +130,7 @@ namespace Repositorio
             conexao.Close();
 
         }
+
         public void Apagar(int id)
         {
             SqlConnection conexao = new SqlConnection();
@@ -141,6 +145,7 @@ namespace Repositorio
             conexao.Close();
 
         }
+
         public void Atualizar(Remedio remedio)
         {
             SqlConnection conexao = new SqlConnection();

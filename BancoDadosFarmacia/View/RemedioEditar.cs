@@ -18,6 +18,25 @@ namespace View
         {
             InitializeComponent();
         }
+        public RemedioEditar(Remedio remedio)
+        {
+            InitializeComponent();
+            txtNome.Text = remedio.Nome;
+            txtId.Text = remedio.Id.ToString();
+            txtCategoria.Text = remedio.Categoria;
+            rbGenerico.Checked = remedio.Generico;
+            rbSolido.Checked = remedio.Solido;
+            txtFaixa.Text = remedio.Faixa;
+
+            if (remedio.PrecisaReceita)
+            {
+                rbSim.Checked = true;
+            }else
+            {
+                rbNao.Checked = true;
+            }
+
+        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {

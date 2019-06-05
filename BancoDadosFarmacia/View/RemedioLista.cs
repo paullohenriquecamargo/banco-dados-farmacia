@@ -36,9 +36,19 @@ namespace View
             for(int i = 0; i< remedios.Count; i++)
             {
                 Remedio remedio = remedios[i];
+                string genericoTexto = "";
+                if (remedio.Generico == true)
+                {
+                    genericoTexto = "Verdadeiro";
+
+                }
+                else
+                {
+                    genericoTexto = "Falso";
+                }
                 dataGridView1.Rows.Add(new object[]
                 {
-                    remedio.Id, remedio.Nome, remedio.Generico, remedio.Categoria, remedio.Faixa
+                    remedio.Id, remedio.Nome, remedio.Categoria, remedio.Faixa, genericoTexto
                 });
             }
         }
@@ -54,6 +64,11 @@ namespace View
             AtualizarTabela();
         }
 
+        private void RemedioLista_Activated(object sender, EventArgs e)
+        {
+            AtualizarTabela();
+        }
+
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
@@ -61,8 +76,9 @@ namespace View
             RemedioRepositorio repositorio = new RemedioRepositorio();
             Remedio remedio = repositorio.ObterPeloId(id);
 
-            RemedioEditar remedioEditar = new RemedioEditar();
+            RemedioEditar remedioEditar = new RemedioEditar(remedio);
             remedioEditar.ShowDialog();
         }
+
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="RemedioCadastro.Designer.cs">
       <DependentUpon>RemedioCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="RemedioEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemedioEditar.Designer.cs">
+      <DependentUpon>RemedioEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="RemedioLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="RemedioCadastro.resx">
       <DependentUpon>RemedioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemedioEditar.resx">
+      <DependentUpon>RemedioEditar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemedioLista.resx">
       <DependentUpon>RemedioLista.cs</DependentUpon>
