@@ -104,6 +104,13 @@ namespace Repositorio
             }
             return null;
         }
+        public void Inserir(Remedio remedio)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiadeConexao;
+            conexao.Opne();
+
+        }
 
     }
 }
