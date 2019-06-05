@@ -108,9 +108,72 @@ namespace Repositorio
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiadeConexao;
-            conexao.Opne();
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "INSERT INTO remedios (nome, eh_generico, categoria, eh_solido, contra_indicacoes, bula, faixa, precisa_receita) VALUES (@NOME, @EH_GENERICO, @CATEGORIA, @EH_SOLIDO, @CONTRA_INDICACOES, @BULA, @FAIXA, @PRECISA_RECEITA";
+
+            comando.Parameters.AddWithValue("@NOME", remedio.Nome);
+            comando.Parameters.AddWithValue("@EH_GENERICO", remedio.Generico);
+            comando.Parameters.AddWithValue("@CATEGORIA", remedio.Categoria);
+            comando.Parameters.AddWithValue("@EH_SOLIDO", remedio.Solido);
+            comando.Parameters.AddWithValue("@CONTRA_INDICACOES", remedio.ContraIndicacoes);
+            comando.Parameters.AddWithValue("@BULA", remedio.Bula);
+            comando.Parameters.AddWithValue("@FAIXA", remedio.Faixa);
+            comando.Parameters.AddWithValue("@PRECISA_RECEITA", remedio.PrecisaReceita);
+
+            comando.ExecuteNonQuery();
+            conexao.Close();
 
         }
+        public void Apagar(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiadeConexao;
+            conexao.Open();
 
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "DELETE FROM remedios WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            comando.ExecuteNonQuery();
+            conexao.Close();
+
+        }
+        public void Atualizar(Remedio remedio)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiadeConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"UPDATE remedios SET 
+nome = @NOME,
+eh_generico = @EH_GENERICO,
+categoria = @CATEGORIA,
+eh_solido = @EH_SOLIDO,
+contra_indicacoes = @CONTRA_INDICACOES,
+bula = @BULA,
+faixa = @FAIXA,
+precisa_receita = @PRECISA_RECEITA
+WHERE id = @ID";
+            comando.Parameters.AddWithValue("@NOME", remedio.Nome);
+            comando.Parameters.AddWithValue("@EH_GENERICO", remedio.Generico);
+            comando.Parameters.AddWithValue("@CATEGORIA", remedio.Categoria);    
+            comando.Parameters.AddWithValue("@EH_SOLIDO", remedio.Solido);
+            comando.Parameters.AddWithValue("@CONTRA_INDICACOES", remedio.ContraIndicacoes);
+            comando.Parameters.AddWithValue("@BULA", remedio.Bula);
+            comando.Parameters.AddWithValue("@FAIXA", remedio.Faixa);
+            comando.Parameters.AddWithValue("@PRECISA_RECEITA", remedio.PrecisaReceita);
+            comando.Parameters.AddWithValue("@ID", remedio.Id);
+            comando.ExecuteNonQuery();
+
+            conexao.Close();
+
+
+
+        }
     }
 }
