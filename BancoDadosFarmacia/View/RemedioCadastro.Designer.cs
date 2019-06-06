@@ -41,14 +41,14 @@
             this.lblFaixa = new System.Windows.Forms.Label();
             this.rbGenerico = new System.Windows.Forms.RadioButton();
             this.rbSolido = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtBula = new System.Windows.Forms.TextBox();
             this.lblBula = new System.Windows.Forms.Label();
             this.txtContraIndicacoes = new System.Windows.Forms.TextBox();
             this.lblContraIndicacoes = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCategoria
@@ -112,7 +112,7 @@
             // 
             this.rbNao.AutoSize = true;
             this.rbNao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNao.Location = new System.Drawing.Point(91, 29);
+            this.rbNao.Location = new System.Drawing.Point(3, 9);
             this.rbNao.Name = "rbNao";
             this.rbNao.Size = new System.Drawing.Size(79, 33);
             this.rbNao.TabIndex = 40;
@@ -124,7 +124,7 @@
             // 
             this.rbSim.AutoSize = true;
             this.rbSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSim.Location = new System.Drawing.Point(9, 29);
+            this.rbSim.Location = new System.Drawing.Point(3, 48);
             this.rbSim.Name = "rbSim";
             this.rbSim.Size = new System.Drawing.Size(76, 33);
             this.rbSim.TabIndex = 39;
@@ -136,7 +136,7 @@
             // 
             this.lblPrecisaReceita.AutoSize = true;
             this.lblPrecisaReceita.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecisaReceita.Location = new System.Drawing.Point(14, 265);
+            this.lblPrecisaReceita.Location = new System.Drawing.Point(5, 255);
             this.lblPrecisaReceita.Name = "lblPrecisaReceita";
             this.lblPrecisaReceita.Size = new System.Drawing.Size(254, 29);
             this.lblPrecisaReceita.TabIndex = 38;
@@ -164,7 +164,7 @@
             // 
             this.rbGenerico.AutoSize = true;
             this.rbGenerico.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbGenerico.Location = new System.Drawing.Point(25, 19);
+            this.rbGenerico.Location = new System.Drawing.Point(3, 3);
             this.rbGenerico.Name = "rbGenerico";
             this.rbGenerico.Size = new System.Drawing.Size(138, 33);
             this.rbGenerico.TabIndex = 43;
@@ -176,35 +176,13 @@
             // 
             this.rbSolido.AutoSize = true;
             this.rbSolido.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSolido.Location = new System.Drawing.Point(25, 58);
+            this.rbSolido.Location = new System.Drawing.Point(3, 42);
             this.rbSolido.Name = "rbSolido";
             this.rbSolido.Size = new System.Drawing.Size(107, 33);
             this.rbSolido.TabIndex = 44;
             this.rbSolido.TabStop = true;
             this.rbSolido.Text = "Sólido";
             this.rbSolido.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbGenerico);
-            this.groupBox1.Controls.Add(this.rbSolido);
-            this.groupBox1.Location = new System.Drawing.Point(14, 152);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 45;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rbNao);
-            this.groupBox2.Controls.Add(this.rbSim);
-            this.groupBox2.Location = new System.Drawing.Point(14, 298);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
-            this.groupBox2.TabIndex = 46;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // txtBula
             // 
@@ -242,17 +220,35 @@
             this.lblContraIndicacoes.TabIndex = 49;
             this.lblContraIndicacoes.Text = "Contra Indicações";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rbSolido);
+            this.panel1.Controls.Add(this.rbGenerico);
+            this.panel1.Location = new System.Drawing.Point(10, 152);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 51;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rbSim);
+            this.panel2.Controls.Add(this.rbNao);
+            this.panel2.Location = new System.Drawing.Point(12, 297);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 52;
+            // 
             // RemedioCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 603);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtContraIndicacoes);
             this.Controls.Add(this.lblContraIndicacoes);
             this.Controls.Add(this.txtBula);
             this.Controls.Add(this.lblBula);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtFaixa);
             this.Controls.Add(this.lblFaixa);
             this.Controls.Add(this.lblPrecisaReceita);
@@ -264,10 +260,10 @@
             this.Controls.Add(this.btnApagar);
             this.Name = "RemedioCadastro";
             this.Text = "RemedioCadastro";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,11 +283,11 @@
         private System.Windows.Forms.Label lblFaixa;
         private System.Windows.Forms.RadioButton rbGenerico;
         private System.Windows.Forms.RadioButton rbSolido;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtBula;
         private System.Windows.Forms.Label lblBula;
         private System.Windows.Forms.TextBox txtContraIndicacoes;
         private System.Windows.Forms.Label lblContraIndicacoes;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

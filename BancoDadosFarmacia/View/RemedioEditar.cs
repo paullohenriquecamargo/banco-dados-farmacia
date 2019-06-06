@@ -27,6 +27,8 @@ namespace View
             rbGenerico.Checked = remedio.Generico;
             rbSolido.Checked = remedio.Solido;
             txtFaixa.Text = remedio.Faixa;
+            txtBula.Text = remedio.Bula;
+            txtContraIndicacoes.Text = remedio.ContraIndicacoes;
 
             if (remedio.PrecisaReceita)
             {
@@ -48,6 +50,8 @@ namespace View
             remedio.PrecisaReceita = rbSim.Checked;
             remedio.Solido = rbSolido.Checked;
             remedio.Faixa = txtFaixa.Text;
+            remedio.Bula = txtBula.Text;
+            remedio.ContraIndicacoes = txtContraIndicacoes.Text;
             RemedioRepositorio repositorio = new RemedioRepositorio();
             repositorio.Atualizar(remedio);
 

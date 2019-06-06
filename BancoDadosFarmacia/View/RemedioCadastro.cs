@@ -35,5 +35,7 @@ namespace View
             repositorio.Inserir(remedio);
             Close();
         }
+
+       
     }
 }

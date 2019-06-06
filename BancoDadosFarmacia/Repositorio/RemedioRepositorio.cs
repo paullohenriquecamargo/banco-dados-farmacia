@@ -164,6 +164,7 @@ bula = @BULA,
 faixa = @FAIXA,
 precisa_receita = @PRECISA_RECEITA
 WHERE id = @ID";
+            
             comando.Parameters.AddWithValue("@NOME", remedio.Nome);
             comando.Parameters.AddWithValue("@EH_GENERICO", remedio.Generico);
             comando.Parameters.AddWithValue("@CATEGORIA", remedio.Categoria);    
@@ -174,11 +175,7 @@ WHERE id = @ID";
             comando.Parameters.AddWithValue("@PRECISA_RECEITA", remedio.PrecisaReceita);
             comando.Parameters.AddWithValue("@ID", remedio.Id);
             comando.ExecuteNonQuery();
-
             conexao.Close();
-
-
-
         }
     }
 }

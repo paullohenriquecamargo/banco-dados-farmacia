@@ -17,8 +17,9 @@ namespace View
         public RemedioLista()
         {
             InitializeComponent();
+            
         }
-
+                                                
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             RemedioCadastro cadastro = new RemedioCadastro();
@@ -39,12 +40,12 @@ namespace View
                 string genericoTexto = "";
                 if (remedio.Generico == true)
                 {
-                    genericoTexto = "Verdadeiro";
+                    genericoTexto = "Sim";
 
                 }
                 else
                 {
-                    genericoTexto = "Falso";
+                    genericoTexto = "Não";
                 }
                 dataGridView1.Rows.Add(new object[]
                 {
@@ -78,7 +79,29 @@ namespace View
 
             RemedioEditar remedioEditar = new RemedioEditar(remedio);
             remedioEditar.ShowDialog();
+
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+            RemedioRepositorio repositorio = new RemedioRepositorio();
+            Remedio remedio = repositorio.ObterPeloId(id);
+
+            RemedioEditar remedioEditar = new RemedioEditar(remedio);
+            remedioEditar.ShowDialog();
+            AtualizarTabela();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            var dialogResult = MessageBox.Show("Deseja encerrar esta aplicação ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

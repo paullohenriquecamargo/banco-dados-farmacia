@@ -15,7 +15,7 @@ INSERT INTO remedios (nome, eh_generico, categoria, eh_solido, contra_indicacoes
     VALUES 
 ('clonazepam',1 ,'antinflamatorio', 0, 'dengue', 'amarelo', 'preta', 0);
 
-DELETE FROM remedios WHERE precisa_receita = 0;
+DELETE FROM remedios WHERE precisa_receita = 1;
 
 SELECT * FROM remedios;
 	

@@ -42,6 +42,10 @@
             this.rbSolido = new System.Windows.Forms.RadioButton();
             this.txtFaixa = new System.Windows.Forms.TextBox();
             this.lblFaixa = new System.Windows.Forms.Label();
+            this.txtBula = new System.Windows.Forms.TextBox();
+            this.lblBula = new System.Windows.Forms.Label();
+            this.txtContraIndicacoes = new System.Windows.Forms.TextBox();
+            this.lblContraIndicacoes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNome
@@ -186,11 +190,51 @@
             this.lblFaixa.TabIndex = 52;
             this.lblFaixa.Text = "Faixa";
             // 
+            // txtBula
+            // 
+            this.txtBula.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBula.Location = new System.Drawing.Point(320, 39);
+            this.txtBula.Name = "txtBula";
+            this.txtBula.Size = new System.Drawing.Size(302, 35);
+            this.txtBula.TabIndex = 55;
+            // 
+            // lblBula
+            // 
+            this.lblBula.AutoSize = true;
+            this.lblBula.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBula.Location = new System.Drawing.Point(317, 7);
+            this.lblBula.Name = "lblBula";
+            this.lblBula.Size = new System.Drawing.Size(65, 29);
+            this.lblBula.TabIndex = 54;
+            this.lblBula.Text = "Bula";
+            // 
+            // txtContraIndicacoes
+            // 
+            this.txtContraIndicacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraIndicacoes.Location = new System.Drawing.Point(322, 109);
+            this.txtContraIndicacoes.Name = "txtContraIndicacoes";
+            this.txtContraIndicacoes.Size = new System.Drawing.Size(302, 35);
+            this.txtContraIndicacoes.TabIndex = 57;
+            // 
+            // lblContraIndicacoes
+            // 
+            this.lblContraIndicacoes.AutoSize = true;
+            this.lblContraIndicacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraIndicacoes.Location = new System.Drawing.Point(319, 77);
+            this.lblContraIndicacoes.Name = "lblContraIndicacoes";
+            this.lblContraIndicacoes.Size = new System.Drawing.Size(223, 29);
+            this.lblContraIndicacoes.TabIndex = 56;
+            this.lblContraIndicacoes.Text = "Contra Indicações";
+            // 
             // RemedioEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 520);
+            this.ClientSize = new System.Drawing.Size(638, 520);
+            this.Controls.Add(this.txtContraIndicacoes);
+            this.Controls.Add(this.lblContraIndicacoes);
+            this.Controls.Add(this.txtBula);
+            this.Controls.Add(this.lblBula);
             this.Controls.Add(this.txtFaixa);
             this.Controls.Add(this.lblFaixa);
             this.Controls.Add(this.rbSolido);
@@ -228,5 +272,9 @@
         private System.Windows.Forms.RadioButton rbSolido;
         private System.Windows.Forms.TextBox txtFaixa;
         private System.Windows.Forms.Label lblFaixa;
+        private System.Windows.Forms.TextBox txtBula;
+        private System.Windows.Forms.Label lblBula;
+        private System.Windows.Forms.TextBox txtContraIndicacoes;
+        private System.Windows.Forms.Label lblContraIndicacoes;
     }
 }
