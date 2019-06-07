@@ -76,7 +76,7 @@ namespace View
             ProdutosHigienicoRepositorio repositorio = new ProdutosHigienicoRepositorio();
             ProdutosHigienico produtosHigienico = repositorio.ObterPeloId(id);
 
-            ProdutosHigienicoEditar produtosHigienicoEditar = new ProdutosHigienicoEditar();
+            ProdutosHigienicoEditar produtosHigienicoEditar = new ProdutosHigienicoEditar(produtosHigienico);
             produtosHigienicoEditar.ShowDialog();
             AtualizarTabela();
         }

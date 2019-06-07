@@ -92,6 +92,11 @@ namespace View
             RemedioEditar remedioEditar = new RemedioEditar(remedio);
             remedioEditar.ShowDialog();
             AtualizarTabela();
-        }                                                                                
+        }
+
+        
+        
+
+        
     }
 }
