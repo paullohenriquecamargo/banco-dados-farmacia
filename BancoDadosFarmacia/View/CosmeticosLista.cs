@@ -21,7 +21,7 @@ namespace View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            CosmeticosCadastro lista = new CosmeticosCadastro();
+            CosmeticoCadastro lista = new CosmeticoCadastro();
             lista.ShowDialog();
         }
 
@@ -57,7 +57,7 @@ namespace View
             AtualizarTabela();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
@@ -67,15 +67,18 @@ namespace View
             CosmeticoEditar cosmeticoEditar = new CosmeticoEditar();
             cosmeticoEditar.ShowDialog();
         }
-
-        private void btnSair_Click(object sender, EventArgs e)
+                                                                
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            var dialogResult = MessageBox.Show("Deseja encerrar esta aplicação ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
-            if(dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
+            CosmeticoRepositorio repositorio = new CosmeticoRepositorio();
+            Cosmetico cosmetico = repositorio.ObterPeloId(id);
+
+            CosmeticoEditar cosmeticoEditar = new CosmeticoEditar(cosmetico);
+            cosmeticoEditar.ShowDialog();
+            AtualizarTabela();
+        }                                
     }
 }

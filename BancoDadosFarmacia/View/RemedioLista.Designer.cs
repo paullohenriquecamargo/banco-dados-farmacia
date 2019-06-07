@@ -37,7 +37,6 @@
             this.ColumnFaixa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGenerico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,23 +120,11 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnSair
-            // 
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(744, 12);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(238, 138);
-            this.btnSair.TabIndex = 4;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
             // RemedioLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 628);
-            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCadastrar);
@@ -162,7 +149,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFaixa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGenerico;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnSair;
     }
 }
 

@@ -30,6 +30,7 @@
         {
             this.btnCadastrodeRemedios = new System.Windows.Forms.Button();
             this.btnCadastrodeCosmeticos = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrodeRemedios
@@ -52,12 +53,25 @@
             this.btnCadastrodeCosmeticos.TabIndex = 1;
             this.btnCadastrodeCosmeticos.Text = "Cadastro de Cosméticos";
             this.btnCadastrodeCosmeticos.UseVisualStyleBackColor = true;
+            this.btnCadastrodeCosmeticos.Click += new System.EventHandler(this.btnCadastrodeCosmeticos_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(283, 222);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(284, 201);
+            this.btnSair.TabIndex = 10;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrodeCosmeticos);
             this.Controls.Add(this.btnCadastrodeRemedios);
             this.Name = "Principal";
@@ -70,5 +84,6 @@
 
         private System.Windows.Forms.Button btnCadastrodeRemedios;
         private System.Windows.Forms.Button btnCadastrodeCosmeticos;
+        private System.Windows.Forms.Button btnSair;
     }
 }

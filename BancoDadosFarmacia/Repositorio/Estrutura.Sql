@@ -19,6 +19,14 @@ CREATE TABLE cosmeticos (
 	quantidade INT,
 	marca VARCHAR(15)
 );
+DROP TABLE produtos_higienicos
+CREATE TABLE produtos_higienicos (
+	id INT PRIMARY KEY IDENTITY,
+	nome VARCHAR(20),
+	categoria VARCHAR(25)
+);
+
+
 
 INSERT INTO cosmeticos(nome,quantidade) VALUES
    ('BB',2);

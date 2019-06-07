@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CosmeticoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CosmeticoCadastro.Designer.cs">
+      <DependentUpon>CosmeticoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CosmeticoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CosmeticoEditar.Designer.cs">
+      <DependentUpon>CosmeticoEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CosmeticosLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CosmeticoCadastro.resx">
+      <DependentUpon>CosmeticoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CosmeticoEditar.resx">
+      <DependentUpon>CosmeticoEditar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CosmeticosLista.resx">
       <DependentUpon>CosmeticosLista.cs</DependentUpon>
     </EmbeddedResource>

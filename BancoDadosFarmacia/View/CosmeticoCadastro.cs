@@ -31,5 +31,14 @@ namespace View
             repositorio.Inserir(cosmetico);
             Close();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Clear();
+            txtDataVencimento.Clear();
+            txtValor.Clear();
+            txtMarca.Clear();
+            txtQuantidade.Clear();
+        }
     }
 }

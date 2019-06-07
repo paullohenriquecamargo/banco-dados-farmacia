@@ -11,7 +11,7 @@ namespace Repositorio
 {
     public class CosmeticoRepositorio
     {
-        string CadeiadeConexao = @"";
+        string CadeiadeConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\65982\Documents\ExemploBancoDados02.mdf;Integrated Security=True;Connect Timeout=30";
         
         public List<Cosmetico> ObterTodos()
         {
@@ -84,7 +84,7 @@ namespace Repositorio
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
             comando.CommandText = @"INSERT INTO cosmeticos (nome, data_vencimento, quantidade , marca, valor) 
-VALUES (@NOME, @DATA_VENCIMENTO, @QUANTIDADE, @MARCA)";
+VALUES (@NOME, @DATA_VENCIMENTO, @QUANTIDADE, @MARCA, @VALOR)";
             comando.Parameters.AddWithValue("@NOME", cosmetico.Nome);
             comando.Parameters.AddWithValue("@DATA_VENCIMENTO", cosmetico.DataVencimento);
             comando.Parameters.AddWithValue("@QUANTIDADE", cosmetico.Quantidade);
@@ -128,6 +128,7 @@ WHERE id = @ID";
             comando.Parameters.AddWithValue("@QUANTIDADE", cosmetico.Quantidade);
             comando.Parameters.AddWithValue("@MARCA", cosmetico.Marca);
             comando.Parameters.AddWithValue("@VALOR", cosmetico.Valor);
+            comando.Parameters.AddWithValue("@ID", cosmetico.Id);
             comando.ExecuteNonQuery();
             conexao.Close();
         }

@@ -92,16 +92,6 @@ namespace View
             RemedioEditar remedioEditar = new RemedioEditar(remedio);
             remedioEditar.ShowDialog();
             AtualizarTabela();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            var dialogResult = MessageBox.Show("Deseja encerrar esta aplicação ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
+        }                                                                                
     }
 }

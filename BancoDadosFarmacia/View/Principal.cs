@@ -22,5 +22,22 @@ namespace View
             RemedioLista lista = new RemedioLista();
             lista.ShowDialog();
         }
+
+        private void btnCadastrodeCosmeticos_Click(object sender, EventArgs e)
+        {
+            CosmeticosLista lista = new CosmeticosLista();
+            lista.ShowDialog();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {                        
+            var dialogResult = MessageBox.Show("Deseja encerrar esta aplicação ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
+        }
     }
 }
