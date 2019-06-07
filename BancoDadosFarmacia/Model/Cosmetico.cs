@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Cosmeticos
+    public class Cosmetico
     {
+        public int Id;
+        public string Nome;
+        public DateTime DataVencimento;
+        public int Quantidade;
+        public string Marca;
+        public decimal Valor;
     }
 }

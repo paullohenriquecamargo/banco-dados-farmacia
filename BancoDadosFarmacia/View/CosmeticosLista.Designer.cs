@@ -31,13 +31,14 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFaixa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGenerico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             this.btnSair.TabIndex = 9;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnEditar
             // 
@@ -69,44 +71,16 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
             this.ColumnNome,
-            this.ColumnCategoria,
-            this.ColumnFaixa,
-            this.ColumnGenerico});
+            this.ColumnDataVencimento,
+            this.ColumnQuantidade,
+            this.ColumnValor,
+            this.ColumnMarca});
             this.dataGridView1.Location = new System.Drawing.Point(12, 156);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1033, 460);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Codigo";
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnCategoria
-            // 
-            this.ColumnCategoria.HeaderText = "Categoria";
-            this.ColumnCategoria.Name = "ColumnCategoria";
-            this.ColumnCategoria.ReadOnly = true;
-            // 
-            // ColumnFaixa
-            // 
-            this.ColumnFaixa.HeaderText = "Faixa";
-            this.ColumnFaixa.Name = "ColumnFaixa";
-            this.ColumnFaixa.ReadOnly = true;
-            // 
-            // ColumnGenerico
-            // 
-            this.ColumnGenerico.HeaderText = "É Genérico";
-            this.ColumnGenerico.Name = "ColumnGenerico";
-            this.ColumnGenerico.ReadOnly = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnCadastrar
             // 
@@ -128,6 +102,43 @@
             this.btnApagar.TabIndex = 5;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Codigo";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnDataVencimento
+            // 
+            this.ColumnDataVencimento.HeaderText = "Data Vencimento";
+            this.ColumnDataVencimento.Name = "ColumnDataVencimento";
+            this.ColumnDataVencimento.ReadOnly = true;
+            // 
+            // ColumnQuantidade
+            // 
+            this.ColumnQuantidade.HeaderText = "Quantidade";
+            this.ColumnQuantidade.Name = "ColumnQuantidade";
+            this.ColumnQuantidade.ReadOnly = true;
+            // 
+            // ColumnValor
+            // 
+            this.ColumnValor.HeaderText = "Valor";
+            this.ColumnValor.Name = "ColumnValor";
+            this.ColumnValor.ReadOnly = true;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
             // 
             // CosmeticosLista
             // 
@@ -141,6 +152,8 @@
             this.Controls.Add(this.btnApagar);
             this.Name = "CosmeticosLista";
             this.Text = "CosmeticosLista";
+            this.Activated += new System.EventHandler(this.CosmeticosLista_Activated);
+            this.Load += new System.EventHandler(this.CosmeticosLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -151,12 +164,13 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFaixa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGenerico;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataVencimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMarca;
     }
 }

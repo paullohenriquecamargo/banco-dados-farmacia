@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnCadastrodeRemedios = new System.Windows.Forms.Button();
+            this.btnCadastrodeCosmeticos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrodeRemedios
@@ -42,11 +43,22 @@
             this.btnCadastrodeRemedios.UseVisualStyleBackColor = true;
             this.btnCadastrodeRemedios.Click += new System.EventHandler(this.btnCadastrodeRemedios_Click);
             // 
+            // btnCadastrodeCosmeticos
+            // 
+            this.btnCadastrodeCosmeticos.Font = new System.Drawing.Font("Revit_HEB_DWG", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrodeCosmeticos.Location = new System.Drawing.Point(283, 12);
+            this.btnCadastrodeCosmeticos.Name = "btnCadastrodeCosmeticos";
+            this.btnCadastrodeCosmeticos.Size = new System.Drawing.Size(284, 204);
+            this.btnCadastrodeCosmeticos.TabIndex = 1;
+            this.btnCadastrodeCosmeticos.Text = "Cadastro de Cosméticos";
+            this.btnCadastrodeCosmeticos.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCadastrodeCosmeticos);
             this.Controls.Add(this.btnCadastrodeRemedios);
             this.Name = "Principal";
             this.Text = "Principal";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnCadastrodeRemedios;
+        private System.Windows.Forms.Button btnCadastrodeCosmeticos;
     }
 }

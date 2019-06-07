@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Repositorio
 {
-    public class CosmeticosRepositorio
+    public class CosmeticoRepositorio
     {
         string CadeiadeConexao = @"";
         
@@ -130,10 +130,6 @@ WHERE id = @ID";
             comando.Parameters.AddWithValue("@VALOR", cosmetico.Valor);
             comando.ExecuteNonQuery();
             conexao.Close();
-
-
-
-
         }
     }
 }

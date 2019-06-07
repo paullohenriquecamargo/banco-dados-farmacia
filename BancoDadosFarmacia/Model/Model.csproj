@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cosmetico.cs" />
     <Compile Include="Remedio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
