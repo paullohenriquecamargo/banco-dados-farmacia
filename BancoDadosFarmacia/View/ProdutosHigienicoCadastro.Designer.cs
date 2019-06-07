@@ -30,7 +30,7 @@
         {
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblid = new System.Windows.Forms.Label();
-            this.txtDataVencimento = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -57,13 +57,13 @@
             this.lblid.TabIndex = 68;
             this.lblid.Text = "Id";
             // 
-            // txtDataVencimento
+            // txtCategoria
             // 
-            this.txtDataVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataVencimento.Location = new System.Drawing.Point(12, 110);
-            this.txtDataVencimento.Name = "txtDataVencimento";
-            this.txtDataVencimento.Size = new System.Drawing.Size(302, 35);
-            this.txtDataVencimento.TabIndex = 67;
+            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(12, 110);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(302, 35);
+            this.txtCategoria.TabIndex = 67;
             // 
             // lblCategoria
             // 
@@ -102,6 +102,7 @@
             this.btnSalvar.TabIndex = 71;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -112,6 +113,7 @@
             this.btnLimpar.TabIndex = 70;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // ProdutosHigienicoCadastro
             // 
@@ -122,7 +124,7 @@
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblid);
-            this.Controls.Add(this.txtDataVencimento);
+            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
@@ -137,7 +139,7 @@
 
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblid;
-        private System.Windows.Forms.TextBox txtDataVencimento;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;

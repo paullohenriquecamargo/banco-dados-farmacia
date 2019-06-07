@@ -34,7 +34,7 @@ namespace View
             dataGridView1.Rows.Clear();
             for(int i = 0;i < produtosHigienicos.Count; i ++)
             {
-                ProdutosHigienico produtosHigienico = new ProdutosHigienico();
+                ProdutosHigienico produtosHigienico = produtosHigienicos[i];
                 dataGridView1.Rows.Add(new object[]
                 {
                     produtosHigienico.Id, produtosHigienico.Nome, produtosHigienico.Categoria

@@ -70,6 +70,24 @@
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProdutosHigienicoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosHigienicoCadastro.Designer.cs">
+      <DependentUpon>ProdutosHigienicoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutosHigienicoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosHigienicoEditar.Designer.cs">
+      <DependentUpon>ProdutosHigienicoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutosHigienicoLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosHigienicoLista.Designer.cs">
+      <DependentUpon>ProdutosHigienicoLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="RemedioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +119,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosHigienicoCadastro.resx">
+      <DependentUpon>ProdutosHigienicoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosHigienicoEditar.resx">
+      <DependentUpon>ProdutosHigienicoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosHigienicoLista.resx">
+      <DependentUpon>ProdutosHigienicoLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemedioCadastro.resx">
       <DependentUpon>RemedioCadastro.cs</DependentUpon>

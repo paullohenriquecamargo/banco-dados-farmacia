@@ -31,6 +31,7 @@
             this.btnCadastrodeRemedios = new System.Windows.Forms.Button();
             this.btnCadastrodeCosmeticos = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnProdutosHigienicos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrodeRemedios
@@ -58,23 +59,36 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(283, 222);
+            this.btnSair.Location = new System.Drawing.Point(283, 220);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(284, 201);
+            this.btnSair.Size = new System.Drawing.Size(284, 204);
             this.btnSair.TabIndex = 10;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // btnProdutosHigienicos
+            // 
+            this.btnProdutosHigienicos.Font = new System.Drawing.Font("Revit_HEB_DWG", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProdutosHigienicos.Location = new System.Drawing.Point(12, 220);
+            this.btnProdutosHigienicos.Name = "btnProdutosHigienicos";
+            this.btnProdutosHigienicos.Size = new System.Drawing.Size(265, 204);
+            this.btnProdutosHigienicos.TabIndex = 11;
+            this.btnProdutosHigienicos.Text = "Produtos Higiênicos";
+            this.btnProdutosHigienicos.UseVisualStyleBackColor = true;
+            this.btnProdutosHigienicos.Click += new System.EventHandler(this.btnProdutosHigienicos_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(576, 430);
+            this.Controls.Add(this.btnProdutosHigienicos);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrodeCosmeticos);
             this.Controls.Add(this.btnCadastrodeRemedios);
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.ResumeLayout(false);
 
@@ -85,5 +99,6 @@
         private System.Windows.Forms.Button btnCadastrodeRemedios;
         private System.Windows.Forms.Button btnCadastrodeCosmeticos;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnProdutosHigienicos;
     }
 }

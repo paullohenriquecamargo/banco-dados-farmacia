@@ -39,5 +39,11 @@ namespace View
             }
             
         }
+
+        private void btnProdutosHigienicos_Click(object sender, EventArgs e)
+        {
+            ProdutosHigienicoLista lista = new ProdutosHigienicoLista();
+            lista.ShowDialog();
+        }
     }
 }
